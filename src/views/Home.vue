@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <Gift :gifts="gifts" />
+    <FeaturedSection />
     <Footer />
   </div>
 </template>
@@ -10,6 +11,7 @@
 // @ is an alias to /src
 import Hero from "@/components/home/Hero.vue";
 import Gift from "@/components/home/Gift.vue";
+import FeaturedSection from "@/components/home/FeaturedSection.vue";
 import Footer from "@/components/Footer.vue"
 import { herGifts } from "@/data/gifts";
 
@@ -18,6 +20,7 @@ export default {
   components: {
     Hero,
     Gift,
+    FeaturedSection,
     Footer
   },
   data: () => ({
