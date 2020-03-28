@@ -28,6 +28,7 @@ export default {
   .banner-text {
     position: relative;
     z-index: 22;
+    text-align: center;
   }
   .banner {
     height: 100%;
