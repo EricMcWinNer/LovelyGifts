@@ -11,7 +11,10 @@ import them2 from "@/assets/img/them2.jpg"
 import them3 from "@/assets/img/them3.jpg"
 import herLeft from "@/assets/img/lefther.png"
 import herRight from "@/assets/img/righther.png"
+import hisRight from "@/assets/img/righthim.png"
+import hisLeft from "@/assets/img/lefthim.png"
 import herBackground from "@/assets/img/herbackground.png"
+import hisBackground from "@/assets/img/hisbackground.png"
 
 export const herGifts = {
   title: "Gifts for her",
@@ -47,56 +50,70 @@ export const herGifts = {
   ],
 }
 
-export const hisGifts = [
-  {
-    name: "iPhone Casing",
-    price: 5500,
-    cancelledPrice: 9990,
-    picture: him1,
-  },
-  {
-    name: "Apple AirPods",
-    price: 30500,
-    cancelledPrice: 54000,
-    picture: him2,
-  },
-  {
-    name: "Tesla Wallpaper",
-    price: 1500,
-    cancelledPrice: 2000,
-    picture: him3,
-  },
-  {
-    name: "Apple Watch",
-    price: 6200,
-    cancelledPrice: 86000,
-    picture: him4,
-  },
-]
+export const hisGifts = {
+  title: "Gifts for him",
+  backgroundColor: "#FAFFFE",
+  leftSector: hisLeft,
+  rightSector: hisRight,
+  backgroundImage: hisBackground,
+  gifts: [
+    {
+      name: "iPhone Casing",
+      price: 5500,
+      cancelledPrice: 9990,
+      picture: him1,
+    },
+    {
+      name: "Apple AirPods",
+      price: 30500,
+      cancelledPrice: 54000,
+      picture: him2,
+    },
+    {
+      name: "Tesla Wallpaper",
+      price: 1500,
+      cancelledPrice: 2000,
+      picture: him3,
+    },
+    {
+      name: "Apple Watch",
+      price: 6200,
+      cancelledPrice: 86000,
+      picture: him4,
+    },
+  ],
+}
 
-export const theirGifts = [
-  {
-    name: "Red Bicycle Bell",
-    price: 5500,
-    cancelledPrice: 9990,
-    picture: them1,
-  },
-  {
-    name: "Vintage Clock",
-    price: 30500,
-    cancelledPrice: 54000,
-    picture: them2,
-  },
-  {
-    name: "Flat Screen Television",
-    price: 51500,
-    cancelledPrice: 80000,
-    picture: them3,
-  },
-  {
-    name: "Homemade Sweets",
-    price: 2900,
-    cancelledPrice: 6000,
-    picture: her4,
-  },
-]
+export const theirGifts = {
+  title: "Gifts for the family",
+  backgroundColor: "#FDF2FC",
+  leftSector: herLeft,
+  rightSector: herRight,
+  backgroundImage: herBackground,
+  gifts: [
+    {
+      name: "Red Bicycle Bell",
+      price: 5500,
+      cancelledPrice: 9990,
+      picture: them1,
+    },
+    {
+      name: "Vintage Clock",
+      price: 30500,
+      cancelledPrice: 54000,
+      picture: them2,
+    },
+    {
+      name: "Flat Screen Television",
+      price: 51500,
+      cancelledPrice: 80000,
+      picture: them3,
+    },
+    {
+      name: "Homemade Sweets",
+      price: 2900,
+      cancelledPrice: 6000,
+      picture: her4,
+    },
+  ],
+}

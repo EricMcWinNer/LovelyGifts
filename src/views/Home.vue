@@ -1,8 +1,10 @@
 <template>
   <div>
     <Hero />
-    <Gift :gifts="gifts" />
+    <Gift :gifts="herGifts" />
+    <Gift :gifts="hisGifts" />
     <FeaturedSection />
+    <Gift :gifts="theirGifts" />
     <Footer />
   </div>
 </template>
@@ -12,8 +14,8 @@
 import Hero from "@/components/home/Hero.vue";
 import Gift from "@/components/home/Gift.vue";
 import FeaturedSection from "@/components/home/FeaturedSection.vue";
-import Footer from "@/components/Footer.vue"
-import { herGifts } from "@/data/gifts";
+import Footer from "@/components/Footer.vue";
+import { herGifts, hisGifts, theirGifts } from "@/data/gifts";
 
 export default {
   name: "Home",
@@ -24,7 +26,9 @@ export default {
     Footer
   },
   data: () => ({
-    gifts: herGifts
+    herGifts: herGifts,
+    hisGifts: hisGifts,
+    theirGifts: theirGifts
   })
 };
 </script>
