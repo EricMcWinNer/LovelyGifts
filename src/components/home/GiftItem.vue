@@ -1,14 +1,17 @@
 <template>
-  <b-col md="3">
-    <div class="gift-item">
-      <div class="image" :style="{ 'background-image': 'url(' + gift.picture + ')' }"></div>
-      <div class="card">
-        <p class="title">{{gift.name}}</p>
-        <p class="price">₦{{gift.price}}</p>
-        <p class="cancelled price">₦{{gift.cancelledPrice}}</p>
-      </div>
+  <div class="gift-item">
+    <div
+      class="image"
+      :style="{
+        'background-image': 'url(' + gift.picture + ')'
+      }"
+    ></div>
+    <div class="card">
+      <p class="title">{{ gift.name }}</p>
+      <p class="price">₦{{ gift.price }}</p>
+      <p class="cancelled price">₦{{ gift.cancelledPrice }}</p>
     </div>
-  </b-col>
+  </div>
 </template>
 
 <script>
@@ -22,13 +25,14 @@ export default {
 
 <style scoped lang="less">
 .gift-item {
-  box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
   border-radius: 9px;
   cursor: pointer;
   transition-property: box-shadow;
   transition-duration: 0.8s;
+  width: calc(100% - 15px);
   &:hover {
-    box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
   }
 }
 .image {

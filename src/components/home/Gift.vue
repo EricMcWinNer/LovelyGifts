@@ -1,9 +1,17 @@
 <template>
   <div :style="cssVars" class="gift">
     <b-container>
-      <p class="title">{{gifts.title}}</p>
+      <p class="title">{{ gifts.title }}</p>
       <b-row>
-        <GiftItem v-for="gift in gifts.gifts" v-bind:key="gift.index" v-bind:gift="gift" />
+        <slider ref="slider" :style="slideStyle" :options="options">
+          <slideritem
+            :style="sliderStyle"
+            v-for="(gift, index) in gifts.gifts"
+            :key="index"
+          >
+            <GiftItem v-bind:gift="gift" />
+          </slideritem>
+        </slider>
       </b-row>
     </b-container>
   </div>
@@ -11,10 +19,31 @@
 
 <script>
 import GiftItem from "@/components/home/GiftItem";
+import { slider, slideritem } from "vue-concise-slider";
 export default {
   name: "Gift",
   components: {
-    GiftItem
+    GiftItem,
+    slider,
+    slideritem
+  },
+  data() {
+    return {
+      options: {
+        currentPage: 0,
+        infinite: 4,
+        slidesToScroll: 1,
+        loop: false,
+        pagination: false
+      },
+      sliderStyle: {
+        width: "calc(23.5%)",
+        "margin-right": "1%",
+        "text-align": "left",
+        "margin-top": "30px",
+        "margin-bottom": "30px"
+      }
+    };
   },
   props: {
     gifts: Object
@@ -39,6 +68,12 @@ export default {
   position: relative;
   background-image: var(--background-image);
   background-color: var(--background-color);
+  .gift-item:first-child {
+    margin-left: 30px;
+  }
+  .gif-item:last-child {
+    margin-right: 30px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -69,6 +104,6 @@ export default {
   color: #333;
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 </style>
