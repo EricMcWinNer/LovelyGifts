@@ -7,6 +7,7 @@
           <p class="flag">up to 50% off</p>
           <p class="subtext">Don't just say you love them, show it...</p>
         </div>
+        <div id="actual-rectangle"></div>
       </div>
     </div>
   </div>
@@ -14,17 +15,34 @@
 
 <script>
 export default {
-  name: "Hero"
+  name: "Hero",
+  mounted() {
+    const hoverEffect = () => {
+      alert("I got hovered");
+    };
+    document
+      .getElementById("actual-rectangle")
+      .addEventListener("mouseenter", hoverEffect);
+  }
 };
 </script>
 
 <style scoped lang="less">
+@keyframes hero-debut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .hero {
   background: url("../../assets/img/hero.png"), rgba(255, 159, 190, 0.7);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+
   .banner-text {
     position: relative;
     z-index: 22;
@@ -68,7 +86,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    &::after {
+    #actual-rectangle {
       content: "";
       border: 10px solid #fff;
       width: 100%;
